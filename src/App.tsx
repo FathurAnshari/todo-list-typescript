@@ -1,11 +1,14 @@
 import React from "react";
+import NewTodo from "./components/NewTodo";
 import Todos from "./components/Todos";
+import TodosContextProvider from "./store/TodosContext";
 
 function App() {
   return (
-    <div>
+    <TodosContextProvider>
+      <NewTodo />
       <Todos />
-    </div>
+    </TodosContextProvider>
   );
 }
 
